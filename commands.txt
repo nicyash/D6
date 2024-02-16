@@ -1,0 +1,35 @@
+from news.models import *																											 # импортвсех моделей
+u1 = User.objects.create_user(username='user1')                                                                                      # Создание встроенного юзера
+u2 = User.objects.create_user(username='user2')                                                                                      # 
+a1 = Author.objects.create(user=u1)                                                                                                  # Создание автора
+a2 = Author.objects.create(user=u2)                                                                                                  # 
+c1 = Category.objects.create(category='Комедия')                                                                                     # Создание категорий
+c2 = Category.objects.create(category='Драма')                                                                                       # 
+c3 = Category.objects.create(category='Приключения')                                                                                 # 
+c4 = Category.objects.create(category='Фантастика')                                                                                  # 
+p1 = Post.objects.create(author=a1, title='Загаловок1', text='текст поста 1')                                                        # Создание постов
+p2 = Post.objects.create(author=a2, title='Загаловок2', text='текст поста 2')                                                        # 
+p3 = Post.objects.create(author=a2, title='Загаловок3', text='текст поста 3', post_type='NS')                                        # 
+pc1 = PostCategory.objects.create(post=p1, category=c1)                                                                              # Присвоение категории постам
+pc1 = PostCategory.objects.create(post=p1, category=c2)                                                                              # 
+pc2 = PostCategory.objects.create(post=p2, category=c3)                                                                              # 
+pc3 = PostCategory.objects.create(post=p3, category=c4)                                                                              # 
+com1 = Comment.objects.create(post=p1, user=u1, comment='Коммент1')                                                                  # Создание коментариев
+com2 = Comment.objects.create(post=p1, user=u2, comment='Коммент2')                                                                  # 
+com3 = Comment.objects.create(post=p2, user=u1, comment='Коммент3')                                                                  # 
+com4 = Comment.objects.create(post=p3, user=u2, comment='Коммент4')                                                                  # 
+p1.like()                                                                                                                            # Лайки/Дизлайки
+p2.like()                                                                                                                            # 
+p3.dislike()                                                                                                                         # 
+com1.like()                                                                                                                          # 
+com1.like()                                                                                                                          # 
+com2.like()                                                                                                                          # 
+com3.dislike()                                                                                                                       # 
+com4.dislike()                                                                                                                       # 
+a1.update_rating()                                                                                                                   # Обновление рейтинга авторов
+a2.update_rating()                                                                                                                   # 
+Author.objects.order_by('-rating')[:1].values("user__username", "rating")                                                            # вывод самого рейтингого автора
+Post.objects.order_by('-rating')[:1].values('author__userAuthor__username', 'rating', 'title', 'post_time')                  		 # вывод дату добавления, username автора, рейтинг, заголовок 
+Post.objects.order_by('-rating')[0].preview()                                                                                        # вывод превью лучшей статьи
+Post.objects.order_by('-rating')[0].comment_set.all().values('post__comment__comment_time', 'post__comment__user__username','post__comment__rating', 'post__comment__comment')   # вывод всех комментариев (дата, пользователь, рейтинг, текст) к этой статье
+																																	 # 
