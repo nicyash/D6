@@ -1,10 +1,39 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+<!--  наследуемся от шаблона default.html, который мы создавали для flatpages -->
+{% extends 'flatpages/default.html' %}
+
+{% load custom_filters %}
+
+<!-- Название у нас будет Posts -->
+{% block title %}
+Posts
+{% endblock title %}
+
+<!-- В контенте на странице мы выводим все новости -->
+{% block content %}
+   <h1>Все новости</h1>
+   <h3>{{ posts|length }}</h3>
+   <hr>
+   {% if posts %}
+       <table>
+           <tr>
+               <td width="400">Загаловок</td>
+               <td width="150">Дата</td>
+               <td width="800">Новость</td>
+           </tr>
+
+           {% for post in posts %}
+           <tr>
+               <!-- Не забываем, что переменные в шаблоне ничем не отличаются
+                от переменных в Python. Здесь также можно получать доступ к
+                полям объекта модели.  -->
+               <td>{{ post.title|censor }}<hr></td>
+               <td>{{ post.post_time|date:'d.m.Y' }}<hr></td>
+               <td>{{ post.text|censor|truncatechars:20 }}<hr></td>
+           </tr>
+           {% endfor %}
+
+       </table>
+   {% else %}
+       <h2>Новостей нет!</h2>
+   {% endif %}
+{% endblock content %}

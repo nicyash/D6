@@ -38,6 +38,10 @@ class Post(models.Model):  # Посты с связями один ко мног
     text = models.TextField(default='Текст')
     rating = models.IntegerField(default=0)
 
+
+    def __str__(self):
+        return f'{self.title.title()}: {self.text[:20]}'
+
     def like(self):  # установка лака к посту
         self.rating += 1
         self.save()
