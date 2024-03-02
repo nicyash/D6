@@ -2,11 +2,15 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.db.models import Sum
 from django.db.models.functions import Coalesce
+from django.urls import reverse
 
 
 class Author(models.Model):  # Модель Автор со связью один к одному к встроенным в джанго пользователем
     user = models.OneToOneField(User, on_delete=models.CASCADE, primary_key=True)
     rating = models.IntegerField(default=0)
+
+    def __str__(self):
+        return self.user.username
 
     def update_rating(self):  # метод обновления рейтинга автора
         posts_rating = Post.objects.filter(author=self).aggregate(pr=Coalesce(Sum('rating'), 0))['pr']
@@ -19,6 +23,9 @@ class Author(models.Model):  # Модель Автор со связью оди�
 
 class Category(models.Model):  # Жанры
     category = models.CharField(max_length=255, unique=True)
+
+    def __str__(self):
+        return self.category.title()
 
 
 class Post(models.Model):  # Посты с связями один ко многим с авторами и многие с многим с жанрами
@@ -53,6 +60,9 @@ class Post(models.Model):  # Посты с связями один ко мног
     def preview(self):  # Вывод превью
         small_text = self.text[0:124] + '...'
         return small_text
+
+    def get_absolute_url(self):
+        return reverse('post_detail', args=[str(self.id)])
 
 
 class PostCategory(models.Model):  # Промежуточная таблица между постами и жанрами

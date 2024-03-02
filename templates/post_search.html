@@ -3,36 +3,45 @@
 {% load custom_filters %}
 {% load custom_tags %}
 
-<!-- Название у нас будет Posts -->
+
 {% block title %}
 Posts
 {% endblock title %}
 
-<!-- В контенте на странице мы выводим все новости -->
 {% block content %}
-   <h1>Все новости</h1>
-    <h3>{{ posts|length }}</h3>
+   <h1>Всего публикаций : {{posts|length}}</h1>
+   <h3>Сегодня : {{ time_now|date:'d.m.Y' }} </h3>
+   <form action="" method="get">
+       {{ filterset.form.as_p }}
+       <input type="submit" value="Найти" />
+   </form>
    <hr>
-   {% if posts %}
+
+
+       {% if posts %}
        <table>
            <tr>
-               <td width="400">Загаловок</td>
-               <td width="150">Дата</td>
-               <td width="800">Новость</td>
+               <td width="400">Название</td>
+               <td width="150">Дата публикации статьи</td>
+               <td width="900">Описание</td>
+               <td width="150">Рейтинг</td>
+               <td width="200">Категории</td>
            </tr>
 
            {% for post in posts %}
            <tr>
-               <td>{{ post.title|censor }}<hr></td>
-               <td>{{ post.post_time|date:'d.m.Y' }}<hr></td>
-               <td>{{ post.text|censor|truncatechars:20 }}<hr></td>
+               <td>{{ post.title }}</td>
+               <td>{{ post.post_time|date:'d.m.Y' }}</td>
+               <td>{{ post.text|truncatewords:20 }}</td>
+               <td>{{ post.rating }}</td>
+               <td>{{ post.category.all|join:", " }}</td>
            </tr>
            {% endfor %}
 
-       </table>
-   {% else %}
+        </table>
+       {% else %}
        <h2>Новостей нет!</h2>
-   {% endif %}
+       {% endif %}
 
 {% if page_obj.has_previous %}
        {# Для каждой ссылки пагинации указываем обработку через новый тег #}

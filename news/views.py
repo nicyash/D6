@@ -1,26 +1,114 @@
-# Импортируем класс, который говорит нам о том,
-# что в этом представлении мы будем выводить список объектов из БД
-from django.views.generic import ListView, DetailView
+from django.urls import reverse_lazy
+from datetime import datetime
+
+from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
+from .models import Post
+
+from .filters import PostFilter
+from .forms import PostForm
 from .models import Post
 
 
 class PostList(ListView):
-    # Указываем модель, объекты которой мы будем выводить
-    model = Post
-    # Поле, которое будет использоваться для сортировки объектов
-    ordering = '-post_time'
-    # Указываем имя шаблона, в котором будут все инструкции о том,
-    # как именно пользователю должны быть показаны наши объекты
-    template_name = 'posts.html'
-    # Это имя списка, в котором будут лежать все объекты.
-    # Его надо указать, чтобы обратиться к списку объектов в html-шаблоне.
-    context_object_name = 'posts'
+    model = Post  # Указываем модель, объекты которой мы будем выводить
+    ordering = '-post_time'  # Поле, которое будет использоваться для сортировки объектов
+    template_name = 'posts.html'   # Указываем имя шаблона, в котором будут все инструкции о том,
+    context_object_name = 'posts'  # Это имя списка, в котором будут лежать все объекты.
+    paginate_by = 10  # количество записей на странице
+
+    def get_queryset(self):
+        queryset = super().get_queryset()
+        self.filterset = PostFilter(self.request.GET, queryset)
+        return self.filterset.qs
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        # Добавляем в контекст объект фильтрации.
+        context['time_now'] = datetime.utcnow()
+        context['filterset'] = self.filterset
+        return context
 
 
 class PostDetail(DetailView):
-    # Модель всё та же, но мы хотим получать информацию по отдельному товару
     model = Post
-    # Используем другой шаблон — post.html
     template_name = 'post.html'
-    # Название объекта, в котором будет выбранный пользователем продукт
     context_object_name = 'post'
+
+
+class PostCreate(CreateView):
+    form_class = PostForm
+    model = Post
+    template_name = 'post_edit.html'
+
+    def form_valid(self, form):
+        post = form.save(commit=False)
+        post.post_type = 'NS'
+        return super().form_valid(form)
+
+
+class ArticlesCreate(CreateView):
+    form_class = PostForm
+    model = Post
+    template_name = 'post_edit.html'
+
+    def form_valid(self, form):
+        post = form.save(commit=False)
+        post.post_type = 'AT'
+        return super().form_valid(form)
+
+# Добавляем представление для изменения товара.
+class PostUpdate(UpdateView):
+    form_class = PostForm
+    model = Post
+    template_name = 'post_edit.html'
+
+    def get_queryset(self):
+        return Post.objects.filter(post_type='NS')
+
+
+class ArticlesUpdate(UpdateView):
+    form_class = PostForm
+    model = Post
+    template_name = 'post_edit.html'
+
+    def get_queryset(self):
+        return Post.objects.filter(post_type='AT')
+
+
+class PostDelete(DeleteView):
+    model = Post
+    template_name = 'post_delete.html'
+    success_url = reverse_lazy('post_list')
+
+    def get_queryset(self):
+        return Post.objects.filter(post_type='NS')
+
+
+class ArticlesDelete(DeleteView):
+    model = Post
+    template_name = 'post_delete.html'
+    success_url = reverse_lazy('post_list')
+
+    def get_queryset(self):
+        return Post.objects.filter(post_type='AT')
+
+
+class MyViev(ListView):
+    model = Post
+    template_name = 'post_search.html'
+    context_object_name = 'posts'
+    paginate_by = 10
+
+    def get_queryset(self):
+
+        queryset = super().get_queryset()
+        self.filterset =PostFilter(self.request.GET, queryset)
+        return self.filterset.qs
+
+    # Метод get_context_data позволяет нам изменить набор данных,
+    # который будет передан в шаблон.
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['time_now'] = datetime.utcnow()
+        context['filterset'] = self.filterset
+        return context
