@@ -1,22 +1,19 @@
 {% extends 'flatpages/default.html' %}
-
 {% load custom_filters %}
-{% load custom_tags %}
 
-<!-- Название у нас будет Posts -->
 {% block title %}
 Posts
 {% endblock title %}
 
-<!-- В контенте на странице мы выводим все новости -->
 {% block content %}
-   <h1>Все новости</h1>
-    <h3>{{ posts|length }}</h3>
+   <h1>Всего публикаций : {{posts|length}}</h1>
+   <h3>Сегодня : {{ time_now|date:'d.m.Y' }} </h3>
    {% if is_not_subscriber %}
-       <p><a href="{% url 'subscribe' category.id %}">Подписаться</a></p>
+       <p class="text-center"><a href="{% url 'subscribe' category.id %}" class="bth bin-secondary bth-sm">Подписаться</a> </p>
    {% endif %}
    <hr>
-   {% if posts %}
+
+   {% if category_news_list %}
        <table>
            <tr>
                <td width="400">Название</td>
@@ -31,9 +28,9 @@ Posts
                {% endif %}
            </tr>
 
-           {% for post in posts %}
+           {% for post in category_news_list %}
            <tr>
-               <<td>{{ post.title }}</td>
+               <td>{{ post.title }}</td>
                <td>{{ post.post_time|date:'d.m.Y' }}</td>
                <td>{{ post.text|truncatewords:20 }}</td>
                <td>{{ post.rating }}</td>
@@ -53,13 +50,14 @@ Posts
                     <a href="{% url 'post_delete' post.id %}">Удалить</a>
                     {% endif %}
                 </td>
+
            </tr>
            {% endfor %}
 
-       </table>
-   {% else %}
+        </table>
+       {% else %}
        <h2>Новостей нет!</h2>
-   {% endif %}
+       {% endif %}
 
 {% if page_obj.has_previous %}
        {# Для каждой ссылки пагинации указываем обработку через новый тег #}

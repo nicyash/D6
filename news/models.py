@@ -23,9 +23,10 @@ class Author(models.Model):  # Модель Автор со связью оди�
 
 class Category(models.Model):  # Жанры
     category = models.CharField(max_length=255, unique=True)
+    subscribers = models.ManyToManyField(User, related_name='categories')
 
     def __str__(self):
-        return self.category.title()
+        return self.category
 
 
 class Post(models.Model):  # Посты с связями один ко многим с авторами и многие с многим с жанрами

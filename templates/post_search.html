@@ -15,12 +15,15 @@ Posts
        {{ filterset.form.as_p }}
        <input type="submit" value="Найти" />
    </form>
+   {% if is_not_subscriber %}
+       <p class="text-center"><a href="{% url 'subscribe' category.id %}" class="bth bin-secondary bth-sm">Подписаться</a> </p>
+   {% endif %}
    <hr>
 
 
    {#проверяеум конкретные права #}
     {% if perms.news.add_post %}
-    <a href="{% url 'post_create' %}">Добавить товар</a>
+    <a href="{% url 'post_create' %}">Добавить пост</a>
     {% endif %}
 
        {% if posts %}
@@ -44,7 +47,12 @@ Posts
                <td>{{ post.post_time|date:'d.m.Y' }}</td>
                <td>{{ post.text|truncatewords:20 }}</td>
                <td>{{ post.rating }}</td>
-               <td>{{ post.category.all|join:", " }}</td>
+               <td>
+                   {% for category in post.category.all %}
+                          <a href="{% url 'category_list' category.id %}">{{ category }}</a>
+                   {% endfor %}
+
+               </td>
                <td>
                     {# А здесь доступ для каждой ссылки теперь будем проверять отдельно #}
                     {% if perms.news.change_post %}
