@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.sites',
     'django.contrib.flatpages',
     'fpage',
-    'news',
+    'news.apps.NewsConfig',
     'accounts',
     'django_filters',
 
@@ -147,12 +147,31 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 STATICFILES_DIRS = [BASE_DIR / "static"]
 
-LOGIN_REDIRECT_URL = "/home/search"
+LOGIN_REDIRECT_URL = "/news/search"
 
 ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_UNIQUE_EMAIL = True
 ACCOUNT_USERNAME_REQUIRED = False
 ACCOUNT_AUTHENTICATION_METHOD = 'email'
 ACCOUNT_EMAIL_VERIFICATION = 'none'
+ACCOUNT_CONFIRM_EMAIL_ON_GET = True       # тру сразу логинит пользователя при подтверждении почты
 
+# Указали форму для дополнительной обработки регистрации пользователя
 ACCOUNT_FORMS = {"signup": "accounts.forms.CustomSignupForm"}
+
+# Настройки для рассылки писем
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_HOST = 'smtp.yandex.ru'
+EMAIL_PORT = 465
+EMAIL_HOST_USER = "example@yandex.ru"
+EMAIL_HOST_PASSWORD = "iliezvcovrxqizez"
+EMAIL_USE_TLS = False
+EMAIL_USE_SSL = True
+
+SITE_URL = 'http://127.0.0.1:8000'
+
+DEFAULT_FROM_EMAIL = "example@yandex.ru"
+
+SERVER_EMAIL = "example@yandex.ru"
+
+

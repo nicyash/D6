@@ -16,6 +16,12 @@ Posts
        <p><a href="{% url 'subscribe' category.id %}">Подписаться</a></p>
    {% endif %}
    <hr>
+   {% if perms.news.add_post %}
+    <a href="{% url 'post_create' %}">Добавить новость</a>
+    <br>
+    <a href="{% url 'articles_create' %}">Добавить статью</a>
+    {% endif %}
+
    {% if posts %}
        <table>
            <tr>
@@ -47,10 +53,18 @@ Posts
                <td>
                     {# А здесь доступ для каждой ссылки теперь будем проверять отдельно #}
                     {% if perms.news.change_post %}
-                    <a href="{% url 'post_update' pk=post.id %}">Изменить</a>
+                      {% if post.post_type ==  "NS" %}
+                        <a href="{% url 'post_update' pk=post.id %}">Изменить</a>
+                      {% else %}
+                        <a href="{% url 'articles_update' pk=post.id  %}" >Изменить</a>
+                      {% endif %}
                     {% endif %}
                     {% if perms.news.delete_post %}
-                    <a href="{% url 'post_delete' post.id %}">Удалить</a>
+                      {% if post.post_type ==  "NS" %}
+                        <a href="{% url 'post_delete' post.id %}">Удалить</a>
+                      {% else %}
+                        <a href="{% url 'articles_delete' post.id %}">Удалить</a>
+                      {% endif %}
                     {% endif %}
                 </td>
            </tr>

@@ -1,7 +1,8 @@
 from django.urls import path
 # Импортируем созданное нами представление
 from .views import (PostList, PostDetail, PostCreate, PostUpdate, PostDelete,
-                    MyViev, ArticlesCreate, ArticlesUpdate, ArticlesDelete, CategoriesListView, subscribe)
+                    MyViev, ArticlesCreate, ArticlesUpdate, ArticlesDelete,
+                    CategoriesListView, subscribe, subscriptions)
 
 
 urlpatterns = [
@@ -16,16 +17,17 @@ urlpatterns = [
     # int — указывает на то, что принимаются только целочисленные значения
     path('<int:pk>', PostDetail.as_view()),
 
-    path('', PostList.as_view(), name='post_list'),
-    path('<int:pk>', PostDetail.as_view(), name='post_detail'),
-    path('search/', MyViev.as_view(), name='post_list_fil'),
+    path('news/', PostList.as_view(), name='post_list'),
+    path('news/<int:pk>', PostDetail.as_view(), name='post_detail'),
+    path('news/search/', MyViev.as_view(), name='post_list_fil'),
     path('news/create/', PostCreate.as_view(), name='post_create'),
     path('news/<int:pk>/edit/', PostUpdate.as_view(), name='post_update'),
     path('news/<int:pk>/delete/', PostDelete.as_view(), name='post_delete'),
     path('articles/create/', ArticlesCreate.as_view(), name='articles_create'),
-    path('articles/<int:pk>/edit/', ArticlesUpdate.as_view(), name='post_update'),
-    path('articles/<int:pk>/delete/', ArticlesDelete.as_view(), name='post_delete'),
+    path('articles/<int:pk>/edit/', ArticlesUpdate.as_view(), name='articles_update'),
+    path('articles/<int:pk>/delete/', ArticlesDelete.as_view(), name='articles_delete'),
     path('categories/<int:pk>', CategoriesListView.as_view(), name='category_list'),
-    path('categories/<int:pk>/subscribe', subscribe, name='subscribe' )
+    path('categories/<int:pk>/subscribe', subscribe, name='subscribe'),
+    path('subscriptions/', subscriptions, name='subscriptions'),
 
 ]

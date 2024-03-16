@@ -44,10 +44,18 @@ Posts
                <td>
                     {# А здесь доступ для каждой ссылки теперь будем проверять отдельно #}
                     {% if perms.news.change_post %}
-                    <a href="{% url 'post_update' pk=post.id %}">Изменить</a>
+                      {% if post.post_type ==  "NS" %}
+                        <a href="{% url 'post_update' pk=post.id %}">Изменить</a>
+                      {% else %}
+                        <a href="{% url 'articles_update' pk=post.id  %}" >Изменить</a>
+                      {% endif %}
                     {% endif %}
                     {% if perms.news.delete_post %}
-                    <a href="{% url 'post_delete' post.id %}">Удалить</a>
+                      {% if post.post_type ==  "NS" %}
+                        <a href="{% url 'post_delete' post.id %}">Удалить</a>
+                      {% else %}
+                        <a href="{% url 'articles_delete' post.id %}">Удалить</a>
+                      {% endif %}
                     {% endif %}
                 </td>
 
@@ -59,24 +67,4 @@ Posts
        <h2>Новостей нет!</h2>
        {% endif %}
 
-{% if page_obj.has_previous %}
-       {# Для каждой ссылки пагинации указываем обработку через новый тег #}
-       <a href="?{% url_replace page=1 %}">1</a>
-       {% if page_obj.previous_page_number != 1 %}
-           ...
-           <a href="?{% url_replace page=page_obj.previous_page_number %}">{{ page_obj.previous_page_number }}</a>
-       {% endif %}
-   {% endif %}
-
-   {# Информация о текущей странице #}
-   {{ page_obj.number }}
-
-   {# Информация о следующих страницах #}
-   {% if page_obj.has_next %}
-       <a href="?{% url_replace page=page_obj.next_page_number %}">{{ page_obj.next_page_number }}</a>
-       {% if paginator.num_pages != page_obj.next_page_number %}
-           ...
-           <a href="?{% url_replace page=page_obj.paginator.num_pages %}">{{ page_obj.paginator.num_pages }}</a>
-       {% endif %}
-   {% endif %}
-{% endblock content %}
+   {% endblock content %}

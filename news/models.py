@@ -23,10 +23,10 @@ class Author(models.Model):  # Модель Автор со связью оди�
 
 class Category(models.Model):  # Жанры
     category = models.CharField(max_length=255, unique=True)
-    subscribers = models.ManyToManyField(User, related_name='categories')
+    subscribers = models.ManyToManyField(User, related_name='categories', through='Subscriber')
 
     def __str__(self):
-        return self.category
+        return f'{self.category}'
 
 
 class Post(models.Model):  # Посты с связями один ко многим с авторами и многие с многим с жанрами
@@ -85,3 +85,16 @@ class Comment(models.Model):  # Коментарии со связями с св
     def dislike(self):  # установка лака к коментарию
         self.rating -= 1
         self.save()
+
+
+class Subscriber(models.Model):
+    user = models.ForeignKey(
+        to=User,
+        on_delete=models.CASCADE,
+        related_name='subscriptions',
+    )
+    category = models.ForeignKey(
+        to='Category',
+        on_delete=models.CASCADE,
+        related_name='subscriptions',
+    )
