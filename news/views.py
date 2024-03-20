@@ -12,6 +12,7 @@ from django.views.generic import ListView, DetailView, CreateView, UpdateView, D
 from .filters import PostFilter
 from .forms import PostForm
 from .models import Post, Category, Subscriber
+from .tasks import send_email_task, weekly_send_email_task
 
 
 class PostList(ListView):
@@ -50,6 +51,8 @@ class PostCreate(PermissionRequiredMixin, LoginRequiredMixin, CreateView):
     def form_valid(self, form):
         post = form.save(commit=False)
         post.post_type = 'NS'
+        post.save()
+        send_email_task.delay(post.pk)
         return super().form_valid(form)
 
 
@@ -63,6 +66,8 @@ class ArticlesCreate(PermissionRequiredMixin, LoginRequiredMixin, CreateView):
     def form_valid(self, form):
         post = form.save(commit=False)
         post.post_type = 'AT'
+        post.save()
+        send_email_task.delay(post.pk)
         return super().form_valid(form)
 
 
