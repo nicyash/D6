@@ -1,0 +1,1462 @@
+[
+{
+  "model": "auth.group",
+  "fields": {
+    "name": "authors",
+    "permissions": [
+      [
+        "add_post",
+        "news",
+        "post"
+      ],
+      [
+        "change_post",
+        "news",
+        "post"
+      ]
+    ]
+  }
+},
+{
+  "model": "auth.user",
+  "fields": {
+    "password": "pbkdf2_sha256$720000$Xi27qquCxInDeRE4FHVOLg$70N6EULQvwRFl+SvBK7M30ewZn0PNu405SKqetH7LKU=",
+    "last_login": "2024-04-15T17:18:48.457Z",
+    "is_superuser": true,
+    "username": "admin",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2024-02-17T15:59:52.493Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "fields": {
+    "password": "!Lz6wJIQps9Lb7zwf0DsViwFgjYioXQUUA5ykhts2",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "user1",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2024-02-17T16:02:16.511Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "fields": {
+    "password": "!UrwmF0o0jAKGT3BYJWBvXU6CoQ9w7jpQf0vNRLPl",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "user2",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2024-02-17T16:02:16.585Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "fields": {
+    "password": "!L1SwvLZ5IB6eRR5kcOuWRzzQbIJCvahQzVV8ZARZ",
+    "last_login": "2024-03-05T17:17:25.593Z",
+    "is_superuser": false,
+    "username": "nicyash",
+    "first_name": "Ермолай",
+    "last_name": "Никитин",
+    "email": "nicyash@yandex.ru",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2024-03-05T17:01:00.579Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "fields": {
+    "password": "pbkdf2_sha256$720000$eGlu2j9xZiTyPp7rp6zCd5$VVyy5XjDzQWsX11ZQVpN5/dqCxq0YOuJqB2pLVNJATY=",
+    "last_login": "2024-03-16T12:17:59.883Z",
+    "is_superuser": false,
+    "username": "user",
+    "first_name": "",
+    "last_name": "",
+    "email": "user@mail.ru",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2024-03-05T17:35:43.654Z",
+    "groups": [
+      [
+        "authors"
+      ]
+    ],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "fields": {
+    "password": "pbkdf2_sha256$720000$AmVOlsRBFpNabzCGydnNWL$mrcwmtowem2rDV7HrgOtHlfkHkq6j97TpmNNIY18GVg=",
+    "last_login": "2024-04-15T17:18:06.285Z",
+    "is_superuser": false,
+    "username": "user27",
+    "first_name": "",
+    "last_name": "",
+    "email": "user2@mail.ru",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2024-03-16T12:23:02.603Z",
+    "groups": [
+      [
+        "authors"
+      ]
+    ],
+    "user_permissions": []
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "0b99xy9fq500jq9d27impuoyqdhqy0nn",
+  "fields": {
+    "session_data": ".eJxVjDsOwjAQBe_iGln-fyjpcwZr1-vgAHKkOKkQdyeRUkA7M--9WYJtrWnrZUkTsSuT7PLLEPKztEPQA9p95nlu6zIhPxJ-2s6HmcrrdrZ_BxV63dfonfexgMhaKiQZhFEoDERlnbMSx5BRkwSyo95pxGBBxigUiZiVNuzzBc93NzU:1rbN6f:kVMbP7iwSVCTSFjXRM7M9DfvQekg1Rzf1TbRaIbnl5g",
+    "expire_date": "2024-03-02T16:00:01.536Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "45gx19wi4h3drkver2tnh6o7xy1j991i",
+  "fields": {
+    "session_data": ".eJxVjDsOwjAQBe_iGln-fyjpcwZr1-vgAHKkOKkQdyeRUkA7M--9WYJtrWnrZUkTsSuT7PLLEPKztEPQA9p95nlu6zIhPxJ-2s6HmcrrdrZ_BxV63dfonfexgMhaKiQZhFEoDERlnbMSx5BRkwSyo95pxGBBxigUiZiVNuzzBc93NzU:1rbQ71:9edzvTMPT14pyNBWU21ptJZHrZCS40BdaclL1cx4FgU",
+    "expire_date": "2024-03-02T19:12:35.028Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "46mmmvn75nutamu5g5ki11xugcuhl5yp",
+  "fields": {
+    "session_data": ".eJxVjDsOwjAQBe_iGln-fyjpcwZr1-vgAHKkOKkQdyeRUkA7M--9WYJtrWnrZUkTsSuT7PLLEPKztEPQA9p95nlu6zIhPxJ-2s6HmcrrdrZ_BxV63dfonfexgMhaKiQZhFEoDERlnbMSx5BRkwSyo95pxGBBxigUiZiVNuzzBc93NzU:1rhXz0:nHBZb6E_mrFiKfh5ldt2lL_pg_hVgTXwQs42XZvO0Gc",
+    "expire_date": "2024-03-19T16:49:38.274Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "7xq6yuc0295538stsqo7n7rghrnqftuo",
+  "fields": {
+    "session_data": ".eJxVjDsOwjAQBe_iGln-fyjpcwZr1-vgAHKkOKkQdyeRUkA7M--9WYJtrWnrZUkTsSuT7PLLEPKztEPQA9p95nlu6zIhPxJ-2s6HmcrrdrZ_BxV63dfonfexgMhaKiQZhFEoDERlnbMSx5BRkwSyo95pxGBBxigUiZiVNuzzBc93NzU:1rfXuW:D1_IUzRvy2fQASJ4WeOfFGaOTi4Yb_OqBDm6Gmde7ww",
+    "expire_date": "2024-03-14T04:20:44.953Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "be85eegvq34fdx2jyetgfh7n62tu5ni9",
+  "fields": {
+    "session_data": ".eJxlUMtuhDAQ-5c5I5SEPDl1-xtVFQ1JEFFZWJGgtlrtvzfZcqG9jTwej-07oHPrvmSLe57CkqPDHNfFXkOeVp-gf7vD7ww93DClz3Xz0ABm6KmipDOMatZqTbThqoFwxTgX6p7C9lLndtvh8d7A84GtsI1Vy8AJG9B9hKUucJ4r3B7G2ifnWKf2crL5elydpCZMU9ERjBkltEczaE75yLkkDBWRbBC-o1wOVHYd80qgIWZ0TgvJxkJgRhSGqCH_dxO8_RvdUCOJLBZSSKl2F75ucfuGnjx-AFhpcto:1rkd8g:kMqfChaJsIxa6j_L0yZvFTV6ve6JKuuIXNiN2fCOuIQ",
+    "expire_date": "2024-03-28T04:56:22.894Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "bgx1nwiantk5sxeo0vczk6u6uz2jtohf",
+  "fields": {
+    "session_data": ".eJxlUMtuhDAM_BefUZQHIYRTt79RrSKTh4jKwooEbavV_nsJ5UJ7s2fs8YyfgNbO65QNrnnwU44Wc5wnc_N5mF2C7uMJvzV0cMeUHvPioALM0DHFGBWaU0YU1S3nvAJ_wzhuo2vyC38rDVlWeF0r2C-YgptYxBiFE9ij_fRTYXAcC0wOa2SfOehELiej78fWSWrANGw6QffS-hAY59I5RZ1Q2NSqFq3UykopmsBr4XortKZNYNJZ3GL02PQSW7XH_P8d78zf8C2vadNuFpJPqXzPf93j8g0dff0Ac_R0cg:1rnLST:gqn4E4R5ImuSNCVpq_teEueFvDpS0-_aHtEZ6srmSTA",
+    "expire_date": "2024-04-04T16:40:01.784Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "fvne3hgong4g4w5muo6x5nd67a6z5v6d",
+  "fields": {
+    "session_data": ".eJxVjDsOwjAQBe_iGln-fyjpcwZr1-vgAHKkOKkQdyeRUkA7M--9WYJtrWnrZUkTsSuT7PLLEPKztEPQA9p95nlu6zIhPxJ-2s6HmcrrdrZ_BxV63dfonfexgMhaKiQZhFEoDERlnbMSx5BRkwSyo95pxGBBxigUiZiVNuzzBc93NzU:1rbRMC:wH820JTuRNu4C2QDYVcFprKSv9erOptWiRblxoDErmI",
+    "expire_date": "2024-03-02T20:32:20.000Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "j3gexuqzkofebu1procnyzppjbpux1rv",
+  "fields": {
+    "session_data": ".eJxVjDsOwjAQBe_iGln-fyjpcwZr1-vgAHKkOKkQdyeRUkA7M--9WYJtrWnrZUkTsSuT7PLLEPKztEPQA9p95nlu6zIhPxJ-2s6HmcrrdrZ_BxV63dfonfexgMhaKiQZhFEoDERlnbMSx5BRkwSyo95pxGBBxigUiZiVNuzzBc93NzU:1rwPyi:hhWowji0qhqdRAZC5WC3GuZ0parcLM_Tv-FVjSnyKkk",
+    "expire_date": "2024-04-29T17:18:48.462Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "q6vybl7nb7hfg9vizooozcpxhbuwi48y",
+  "fields": {
+    "session_data": ".eJxVj8kOwiAURf-FtSFAGUp3-iPkMaVEpEkLboz_LjU1pst3h_NyXwicW1qp5hnWFFPwJjwgZTSVlvMFGWh1Nm0Lq0keTUijk2bB3UPZDch5l_GBw9_MYW_42q9QanJQ01JuR-uEmmGbO0cwppUYPWg7csoj55IwUEQyK_xAubRUDgPzSoAmOjo3CsliDzAtekJ06G8R_J_2WVDRRBXRUhLKOSaD6OD3BxAXVFk:1rhYhc:H74UGST6j538MqabcuSd9CEkg_u_4_oV2OfQHJmiB_A",
+    "expire_date": "2024-03-19T17:35:44.037Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "r0xdks0igh9962jbllt0p7wjxtqtkdsg",
+  "fields": {
+    "session_data": ".eJxlUMtuhDAM_BefEcqDJIRTt79RrSLnJVBZWJGgbbXafy-hXGhv9tgez8wT0Ll5nbLBNfdhyoPDPMyTuYXczz5B9_GE3xo6uGNKj3nxUAFm6KiiRAtCKK-ZJkIqWUG44TBuq2sKC3srTb2s8LpWsH8wBTdDIaMETqBF9xmmMsFxLHB9SKv3nWOc6stJ6PtxdaLqMfUbT9RWuBAjZUx4r4jnCmWjGt4KrZwQXEbWcG8d15rISIV3qFtmUVqBrdpt_k8nePPHPJeNYC3bJKSQUkkvfN2H5Rs68voBe1d0dg:1rmyFx:IqjNgaJkmsRk1Wl2jJmYaU7ZWqDJGnYOPDkTiNeAhLY",
+    "expire_date": "2024-04-03T15:53:33.375Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "x1kizak403w043z3warzjlvtg5h9euhc",
+  "fields": {
+    "session_data": ".eJxVj8sKwjAURP8lawl5NK_u9EfCzYsGYwpt4kb8d1upSJczc-8Z5oXA-7nXZp9xySnHYOMDckFj7aVckIXeJtvXuNgc0IgoQSfTgb_HuidQym7jg4e_N0e84uumYm3ZQ8tzvR1fJ9QE67RxknHCx5QoYyIERQJXIAc1cC2M8kJwmdjAg_PcGCITFcGD0cyBdAK02qG_SfAv3XZBQyNVlAhDlWbYSCkpNe8PE8ZWLA:1rlT42:SPDnbhz8s1A8Sv9HZuTSbeA4z8gchX4FNiZhwZavOb8",
+    "expire_date": "2024-03-30T12:23:02.966Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "yj67upkjndym9nlu7flmmc9txagyo2e9",
+  "fields": {
+    "session_data": ".eJxlUMtuhDAM_BefEcrLCeHU7W9UFTJJEFFZWJGgtlrtv5dsudDerPF4PDN3IOeWbc4dbXkMc46Oclzm7hryuPgE7dsdfmdo4UYpfS6rhwooQ8sNZxKt5FhrpaU1uoJwpTjt1C2F9aXM9brB472C54OuwF0sWhZOWE_uI8xlQdNU4PowVj85xzrVl5PN1-PqJDVSGncdFMIabDzZvlFcDUppJsgwLXr0kivdcy2l8AbJMjs416AWw04QFncGlpD_uwm--xtdS4UWdwsppFS6C1-3uH5Dyx4_Vixy2A:1rkUaZ:ey8hqg9X8Cix1kDtSajzYgQI8KbT0T-xjcCG16Lgb04",
+    "expire_date": "2024-03-27T19:48:35.674Z"
+  }
+},
+{
+  "model": "sites.site",
+  "fields": {
+    "domain": "127.0.0.1",
+    "name": "example.com"
+  }
+},
+{
+  "model": "news.author",
+  "pk": 2,
+  "fields": {
+    "rating": 7
+  }
+},
+{
+  "model": "news.author",
+  "pk": 3,
+  "fields": {
+    "rating": -2
+  }
+},
+{
+  "model": "news.category",
+  "pk": 1,
+  "fields": {
+    "category": "Комедия"
+  }
+},
+{
+  "model": "news.category",
+  "pk": 2,
+  "fields": {
+    "category": "Драма"
+  }
+},
+{
+  "model": "news.category",
+  "pk": 3,
+  "fields": {
+    "category": "Приключения"
+  }
+},
+{
+  "model": "news.category",
+  "pk": 4,
+  "fields": {
+    "category": "Фантастика"
+  }
+},
+{
+  "model": "news.post",
+  "pk": 1,
+  "fields": {
+    "author": 2,
+    "post_type": "AT",
+    "post_time": "2024-02-17T16:19:21.602Z",
+    "title": "В нашем доме",
+    "text": "Как же нам не веселиться,\r\nКак же нам не ликовать.\r\nВ нашем доме поселилась\r\nЗамечательная редиска.\r\nЕще что то там",
+    "rating": 1
+  }
+},
+{
+  "model": "news.post",
+  "pk": 2,
+  "fields": {
+    "author": 3,
+    "post_type": "AT",
+    "post_time": "2024-02-17T16:19:21.670Z",
+    "title": "Компьютерная игра Дурак",
+    "text": "Дурак — карточная игра, в которую играют от 2 человек. Цель игры — по ходу игры скинуть все карты и выйти из игры, последний вышедший становится проигравшим, «дураком». В начале игры показывают первую карту с козырем. Из-за простых правил игра получила большое распространение в России и странах бывшего СССР.",
+    "rating": 1
+  }
+},
+{
+  "model": "news.post",
+  "pk": 3,
+  "fields": {
+    "author": 3,
+    "post_type": "NS",
+    "post_time": "2024-02-17T16:19:21.674Z",
+    "title": "Загаловок3",
+    "text": "текст поста 3",
+    "rating": -1
+  }
+},
+{
+  "model": "news.post",
+  "pk": 4,
+  "fields": {
+    "author": 2,
+    "post_type": "NS",
+    "post_time": "2024-02-17T20:32:44.953Z",
+    "title": "Загаловок4",
+    "text": "Текст 4-й новости",
+    "rating": 0
+  }
+},
+{
+  "model": "news.post",
+  "pk": 5,
+  "fields": {
+    "author": 2,
+    "post_type": "AT",
+    "post_time": "2024-03-01T11:37:56.027Z",
+    "title": "Загаловок7",
+    "text": "Текст8",
+    "rating": 0
+  }
+},
+{
+  "model": "news.post",
+  "pk": 6,
+  "fields": {
+    "author": 2,
+    "post_type": "AT",
+    "post_time": "2024-03-01T11:38:37.948Z",
+    "title": "Загаловок1",
+    "text": "Текст36",
+    "rating": 0
+  }
+},
+{
+  "model": "news.post",
+  "pk": 7,
+  "fields": {
+    "author": 2,
+    "post_type": "AT",
+    "post_time": "2024-03-01T11:38:51.450Z",
+    "title": "Загаловок45",
+    "text": "Текст36cv xcvb",
+    "rating": 0
+  }
+},
+{
+  "model": "news.post",
+  "pk": 8,
+  "fields": {
+    "author": 2,
+    "post_type": "AT",
+    "post_time": "2024-03-01T17:57:20.067Z",
+    "title": "Загаловок5",
+    "text": "Текст, самое сложное в программирование это заполнение пустых полей",
+    "rating": 0
+  }
+},
+{
+  "model": "news.post",
+  "pk": 9,
+  "fields": {
+    "author": 2,
+    "post_type": "AT",
+    "post_time": "2024-03-01T17:57:47.964Z",
+    "title": "Загаловок51",
+    "text": "Текст, самое сложное в программирование это заполнение пустых полей\r\nдля 5ой статьи",
+    "rating": 0
+  }
+},
+{
+  "model": "news.post",
+  "pk": 10,
+  "fields": {
+    "author": 2,
+    "post_type": "AT",
+    "post_time": "2024-03-02T13:25:53.664Z",
+    "title": "Загаловок67",
+    "text": "Текст 25 заполняем бессмысленными буквами",
+    "rating": 0
+  }
+},
+{
+  "model": "news.post",
+  "pk": 11,
+  "fields": {
+    "author": 2,
+    "post_type": "NS",
+    "post_time": "2024-03-02T13:29:05.844Z",
+    "title": "Загаловок09",
+    "text": "Текст",
+    "rating": 0
+  }
+},
+{
+  "model": "news.post",
+  "pk": 12,
+  "fields": {
+    "author": 2,
+    "post_type": "AT",
+    "post_time": "2024-03-02T16:08:32.952Z",
+    "title": "Загаловок2",
+    "text": "Текст статьбя",
+    "rating": 0
+  }
+},
+{
+  "model": "news.post",
+  "pk": 15,
+  "fields": {
+    "author": 3,
+    "post_type": "AT",
+    "post_time": "2024-03-02T16:54:31.721Z",
+    "title": "Загаловок91",
+    "text": "Текст это должна быть статья",
+    "rating": 0
+  }
+},
+{
+  "model": "news.post",
+  "pk": 18,
+  "fields": {
+    "author": 2,
+    "post_type": "NS",
+    "post_time": "2024-03-14T18:51:29.035Z",
+    "title": "Загаловок",
+    "text": "ТекстТекстТекстТекстТекстТекстТекстТекст",
+    "rating": 0
+  }
+},
+{
+  "model": "news.post",
+  "pk": 19,
+  "fields": {
+    "author": 3,
+    "post_type": "NS",
+    "post_time": "2024-03-14T19:30:25.695Z",
+    "title": "Загаловок3",
+    "text": "Текст",
+    "rating": 0
+  }
+},
+{
+  "model": "news.post",
+  "pk": 20,
+  "fields": {
+    "author": 2,
+    "post_type": "AT",
+    "post_time": "2024-03-14T19:33:36.874Z",
+    "title": "Загаловок78",
+    "text": "Текст статья",
+    "rating": 0
+  }
+},
+{
+  "model": "news.post",
+  "pk": 21,
+  "fields": {
+    "author": 2,
+    "post_type": "AT",
+    "post_time": "2024-03-14T19:51:55.820Z",
+    "title": "Загаловок",
+    "text": "Текст Драма",
+    "rating": 0
+  }
+},
+{
+  "model": "news.post",
+  "pk": 22,
+  "fields": {
+    "author": 2,
+    "post_type": "AT",
+    "post_time": "2024-03-14T19:55:51.383Z",
+    "title": "Драма",
+    "text": "Текст еще одна драма",
+    "rating": 0
+  }
+},
+{
+  "model": "news.post",
+  "pk": 23,
+  "fields": {
+    "author": 3,
+    "post_type": "AT",
+    "post_time": "2024-03-15T03:44:08.446Z",
+    "title": "Загаловок Прикл",
+    "text": "Текст Приключения",
+    "rating": 0
+  }
+},
+{
+  "model": "news.post",
+  "pk": 24,
+  "fields": {
+    "author": 2,
+    "post_type": "AT",
+    "post_time": "2024-03-15T03:46:03.952Z",
+    "title": "Приключения на луне",
+    "text": "Текст По чему то по опять приключения",
+    "rating": 0
+  }
+},
+{
+  "model": "news.post",
+  "pk": 25,
+  "fields": {
+    "author": 2,
+    "post_type": "AT",
+    "post_time": "2024-03-16T12:17:04.632Z",
+    "title": "Тес Комедии",
+    "text": "Текст рассылки при создании комедии",
+    "rating": 0
+  }
+},
+{
+  "model": "news.post",
+  "pk": 26,
+  "fields": {
+    "author": 3,
+    "post_type": "NS",
+    "post_time": "2024-03-16T12:18:55.677Z",
+    "title": "Тест 2 комедия",
+    "text": "Вторая попытка рассылки про комедию",
+    "rating": 0
+  }
+},
+{
+  "model": "news.post",
+  "pk": 27,
+  "fields": {
+    "author": 2,
+    "post_type": "NS",
+    "post_time": "2024-03-16T12:23:56.924Z",
+    "title": "Комедия 3",
+    "text": "Текст пойдет ли рассылка на 2 пользователя",
+    "rating": 0
+  }
+},
+{
+  "model": "news.post",
+  "pk": 28,
+  "fields": {
+    "author": 2,
+    "post_type": "AT",
+    "post_time": "2024-03-20T15:54:41.238Z",
+    "title": "Загаловок комедии",
+    "text": "Текст c тасками первая попытка",
+    "rating": 0
+  }
+},
+{
+  "model": "news.post",
+  "pk": 29,
+  "fields": {
+    "author": 2,
+    "post_type": "AT",
+    "post_time": "2024-03-20T16:28:40.411Z",
+    "title": "Загаловок комедии1",
+    "text": "Текст c тасками первая попытка1",
+    "rating": 0
+  }
+},
+{
+  "model": "news.post",
+  "pk": 30,
+  "fields": {
+    "author": 2,
+    "post_type": "AT",
+    "post_time": "2024-03-20T16:34:38.099Z",
+    "title": "Загаловок комедии2",
+    "text": "Текст c тасками первая попытка2",
+    "rating": 0
+  }
+},
+{
+  "model": "news.post",
+  "pk": 31,
+  "fields": {
+    "author": 2,
+    "post_type": "AT",
+    "post_time": "2024-03-20T16:41:18.580Z",
+    "title": "Загаловок комедии3",
+    "text": "Текст c тасками первая попытка3",
+    "rating": 0
+  }
+},
+{
+  "model": "news.post",
+  "pk": 32,
+  "fields": {
+    "author": 2,
+    "post_type": "AT",
+    "post_time": "2024-03-20T16:42:37.689Z",
+    "title": "Загаловок комедии4",
+    "text": "Текст c тасками первая попытка4",
+    "rating": 0
+  }
+},
+{
+  "model": "news.post",
+  "pk": 33,
+  "fields": {
+    "author": 2,
+    "post_type": "AT",
+    "post_time": "2024-03-20T16:45:48.662Z",
+    "title": "Загаловок комедии5",
+    "text": "Текст c тасками первая попытка5",
+    "rating": 0
+  }
+},
+{
+  "model": "news.post",
+  "pk": 34,
+  "fields": {
+    "author": 2,
+    "post_type": "AT",
+    "post_time": "2024-03-20T16:46:50.351Z",
+    "title": "Загаловок комедии6",
+    "text": "Текст c тасками первая попытка6",
+    "rating": 0
+  }
+},
+{
+  "model": "news.post",
+  "pk": 35,
+  "fields": {
+    "author": 2,
+    "post_type": "AT",
+    "post_time": "2024-03-20T16:58:54.503Z",
+    "title": "Загаловок комедии7",
+    "text": "Текст c тасками первая попытка7",
+    "rating": 0
+  }
+},
+{
+  "model": "news.postcategory",
+  "pk": 1,
+  "fields": {
+    "post": 1,
+    "category": 1
+  }
+},
+{
+  "model": "news.postcategory",
+  "pk": 2,
+  "fields": {
+    "post": 1,
+    "category": 2
+  }
+},
+{
+  "model": "news.postcategory",
+  "pk": 3,
+  "fields": {
+    "post": 2,
+    "category": 3
+  }
+},
+{
+  "model": "news.postcategory",
+  "pk": 4,
+  "fields": {
+    "post": 3,
+    "category": 4
+  }
+},
+{
+  "model": "news.postcategory",
+  "pk": 5,
+  "fields": {
+    "post": 5,
+    "category": 2
+  }
+},
+{
+  "model": "news.postcategory",
+  "pk": 6,
+  "fields": {
+    "post": 6,
+    "category": 3
+  }
+},
+{
+  "model": "news.postcategory",
+  "pk": 7,
+  "fields": {
+    "post": 7,
+    "category": 4
+  }
+},
+{
+  "model": "news.postcategory",
+  "pk": 8,
+  "fields": {
+    "post": 8,
+    "category": 2
+  }
+},
+{
+  "model": "news.postcategory",
+  "pk": 9,
+  "fields": {
+    "post": 9,
+    "category": 3
+  }
+},
+{
+  "model": "news.postcategory",
+  "pk": 10,
+  "fields": {
+    "post": 10,
+    "category": 3
+  }
+},
+{
+  "model": "news.postcategory",
+  "pk": 11,
+  "fields": {
+    "post": 11,
+    "category": 4
+  }
+},
+{
+  "model": "news.postcategory",
+  "pk": 12,
+  "fields": {
+    "post": 12,
+    "category": 3
+  }
+},
+{
+  "model": "news.postcategory",
+  "pk": 15,
+  "fields": {
+    "post": 15,
+    "category": 2
+  }
+},
+{
+  "model": "news.postcategory",
+  "pk": 16,
+  "fields": {
+    "post": 18,
+    "category": 4
+  }
+},
+{
+  "model": "news.postcategory",
+  "pk": 17,
+  "fields": {
+    "post": 19,
+    "category": 2
+  }
+},
+{
+  "model": "news.postcategory",
+  "pk": 18,
+  "fields": {
+    "post": 20,
+    "category": 4
+  }
+},
+{
+  "model": "news.postcategory",
+  "pk": 19,
+  "fields": {
+    "post": 21,
+    "category": 2
+  }
+},
+{
+  "model": "news.postcategory",
+  "pk": 20,
+  "fields": {
+    "post": 22,
+    "category": 2
+  }
+},
+{
+  "model": "news.postcategory",
+  "pk": 21,
+  "fields": {
+    "post": 4,
+    "category": 3
+  }
+},
+{
+  "model": "news.postcategory",
+  "pk": 22,
+  "fields": {
+    "post": 23,
+    "category": 3
+  }
+},
+{
+  "model": "news.postcategory",
+  "pk": 23,
+  "fields": {
+    "post": 24,
+    "category": 3
+  }
+},
+{
+  "model": "news.postcategory",
+  "pk": 24,
+  "fields": {
+    "post": 25,
+    "category": 1
+  }
+},
+{
+  "model": "news.postcategory",
+  "pk": 25,
+  "fields": {
+    "post": 26,
+    "category": 1
+  }
+},
+{
+  "model": "news.postcategory",
+  "pk": 26,
+  "fields": {
+    "post": 27,
+    "category": 1
+  }
+},
+{
+  "model": "news.postcategory",
+  "pk": 27,
+  "fields": {
+    "post": 28,
+    "category": 1
+  }
+},
+{
+  "model": "news.postcategory",
+  "pk": 28,
+  "fields": {
+    "post": 29,
+    "category": 1
+  }
+},
+{
+  "model": "news.postcategory",
+  "pk": 29,
+  "fields": {
+    "post": 30,
+    "category": 1
+  }
+},
+{
+  "model": "news.postcategory",
+  "pk": 30,
+  "fields": {
+    "post": 31,
+    "category": 1
+  }
+},
+{
+  "model": "news.postcategory",
+  "pk": 31,
+  "fields": {
+    "post": 32,
+    "category": 1
+  }
+},
+{
+  "model": "news.postcategory",
+  "pk": 32,
+  "fields": {
+    "post": 33,
+    "category": 1
+  }
+},
+{
+  "model": "news.postcategory",
+  "pk": 33,
+  "fields": {
+    "post": 34,
+    "category": 1
+  }
+},
+{
+  "model": "news.postcategory",
+  "pk": 34,
+  "fields": {
+    "post": 35,
+    "category": 1
+  }
+},
+{
+  "model": "news.comment",
+  "pk": 1,
+  "fields": {
+    "comment": "Коммент1",
+    "comment_time": "2024-02-17T16:19:42.104Z",
+    "rating": 2,
+    "post": 1,
+    "user": [
+      "user1"
+    ]
+  }
+},
+{
+  "model": "news.comment",
+  "pk": 2,
+  "fields": {
+    "comment": "Коммент2",
+    "comment_time": "2024-02-17T16:19:42.169Z",
+    "rating": 1,
+    "post": 1,
+    "user": [
+      "user2"
+    ]
+  }
+},
+{
+  "model": "news.comment",
+  "pk": 3,
+  "fields": {
+    "comment": "Коммент3",
+    "comment_time": "2024-02-17T16:19:42.172Z",
+    "rating": -1,
+    "post": 2,
+    "user": [
+      "user1"
+    ]
+  }
+},
+{
+  "model": "news.comment",
+  "pk": 4,
+  "fields": {
+    "comment": "Коммент4",
+    "comment_time": "2024-02-17T16:19:42.176Z",
+    "rating": -1,
+    "post": 3,
+    "user": [
+      "user2"
+    ]
+  }
+},
+{
+  "model": "news.subscriber",
+  "pk": 7,
+  "fields": {
+    "user": [
+      "admin"
+    ],
+    "category": 2
+  }
+},
+{
+  "model": "news.subscriber",
+  "pk": 8,
+  "fields": {
+    "user": [
+      "admin"
+    ],
+    "category": 1
+  }
+},
+{
+  "model": "news.subscriber",
+  "pk": 9,
+  "fields": {
+    "user": [
+      "user"
+    ],
+    "category": 1
+  }
+},
+{
+  "model": "news.subscriber",
+  "pk": 10,
+  "fields": {
+    "user": [
+      "user27"
+    ],
+    "category": 1
+  }
+},
+{
+  "model": "account.emailaddress",
+  "pk": 1,
+  "fields": {
+    "user": [
+      "nicyash"
+    ],
+    "email": "nicyash@yandex.ru",
+    "verified": true,
+    "primary": true
+  }
+},
+{
+  "model": "account.emailaddress",
+  "pk": 6,
+  "fields": {
+    "user": [
+      "user"
+    ],
+    "email": "user@mail.ru",
+    "verified": false,
+    "primary": true
+  }
+},
+{
+  "model": "account.emailaddress",
+  "pk": 7,
+  "fields": {
+    "user": [
+      "user27"
+    ],
+    "email": "user2@mail.ru",
+    "verified": false,
+    "primary": true
+  }
+},
+{
+  "model": "socialaccount.socialapp",
+  "pk": 1,
+  "fields": {
+    "provider": "yandex",
+    "provider_id": "",
+    "name": "Yandex",
+    "client_id": "9fd80e2fc84b4db1bb32d241fea8fa41",
+    "secret": "14bb3147449f47a7b3a09a9e98126611",
+    "key": "",
+    "settings": {},
+    "sites": [
+      [
+        "127.0.0.1"
+      ]
+    ]
+  }
+},
+{
+  "model": "socialaccount.socialaccount",
+  "pk": 1,
+  "fields": {
+    "user": [
+      "nicyash"
+    ],
+    "provider": "yandex",
+    "uid": "38647231",
+    "last_login": "2024-03-05T17:17:25.517Z",
+    "date_joined": "2024-03-05T17:01:00.649Z",
+    "extra_data": {
+      "id": "38647231",
+      "login": "nicyash",
+      "client_id": "9fd80e2fc84b4db1bb32d241fea8fa41",
+      "display_name": "nicyash",
+      "real_name": "Ермолай Никитин",
+      "first_name": "Ермолай",
+      "last_name": "Никитин",
+      "sex": "male",
+      "default_email": "nicyash@yandex.ru",
+      "emails": [
+        "nicyash@yandex.ru"
+      ],
+      "psuid": "1.AAtmyg.xWXPqt6OJ8bLFDIIHewKDw.SGT9x3ogD6xg-xByPQqrIA"
+    }
+  }
+},
+{
+  "model": "django_apscheduler.djangojob",
+  "pk": "delete_old_job_executions",
+  "fields": {
+    "next_run_time": "2024-03-22T15:00:00Z",
+    "job_state": "gAWVWQQAAAAAAAB9lCiMB3ZlcnNpb26USwGMAmlklIwZZGVsZXRlX29sZF9qb2JfZXhlY3V0aW9uc5SMBGZ1bmOUjEFuZXdzLm1hbmFnZW1lbnQuY29tbWFuZHMucnVuYXBzY2hlZHVsZXI6ZGVsZXRlX29sZF9qb2JfZXhlY3V0aW9uc5SMB3RyaWdnZXKUjBlhcHNjaGVkdWxlci50cmlnZ2Vycy5jcm9ulIwLQ3JvblRyaWdnZXKUk5QpgZR9lChoAUsCjAh0aW1lem9uZZSMCGJ1aWx0aW5zlIwHZ2V0YXR0cpSTlIwIem9uZWluZm+UjAhab25lSW5mb5STlIwJX3VucGlja2xllIaUUpSMDUV1cm9wZS9Nb3Njb3eUSwGGlFKUjApzdGFydF9kYXRllE6MCGVuZF9kYXRllE6MBmZpZWxkc5RdlCiMIGFwc2NoZWR1bGVyLnRyaWdnZXJzLmNyb24uZmllbGRzlIwJQmFzZUZpZWxklJOUKYGUfZQojARuYW1llIwEeWVhcpSMCmlzX2RlZmF1bHSUiIwLZXhwcmVzc2lvbnOUXZSMJWFwc2NoZWR1bGVyLnRyaWdnZXJzLmNyb24uZXhwcmVzc2lvbnOUjA1BbGxFeHByZXNzaW9ulJOUKYGUfZSMBHN0ZXCUTnNiYXViaB2MCk1vbnRoRmllbGSUk5QpgZR9lChoIowFbW9udGiUaCSIaCVdlGgpKYGUfZRoLE5zYmF1YmgdjA9EYXlPZk1vbnRoRmllbGSUk5QpgZR9lChoIowDZGF5lGgkiGglXZRoKSmBlH2UaCxOc2JhdWJoHYwJV2Vla0ZpZWxklJOUKYGUfZQoaCKMBHdlZWuUaCSIaCVdlGgpKYGUfZRoLE5zYmF1YmgdjA5EYXlPZldlZWtGaWVsZJSTlCmBlH2UKGgijAtkYXlfb2Zfd2Vla5RoJIloJV2UaCeMFldlZWtkYXlSYW5nZUV4cHJlc3Npb26Uk5QpgZR9lChoLE6MBWZpcnN0lEsEjARsYXN0lEsEdWJhdWJoHymBlH2UKGgijARob3VylGgkiWglXZRoJ4wPUmFuZ2VFeHByZXNzaW9ulJOUKYGUfZQoaCxOaE9LEmhQSxJ1YmF1YmgfKYGUfZQoaCKMBm1pbnV0ZZRoJIloJV2UaFYpgZR9lChoLE5oT0sAaFBLAHViYXViaB8pgZR9lChoIowGc2Vjb25klGgkiGglXZRoVimBlH2UKGgsTmhPSwBoUEsAdWJhdWJljAZqaXR0ZXKUTnVijAhleGVjdXRvcpSMB2RlZmF1bHSUjARhcmdzlCmMBmt3YXJnc5R9lGgiaAOMEm1pc2ZpcmVfZ3JhY2VfdGltZZRLAYwIY29hbGVzY2WUiIwNbWF4X2luc3RhbmNlc5RLAYwNbmV4dF9ydW5fdGltZZSMCGRhdGV0aW1llIwIZGF0ZXRpbWWUk5RDCgfoAxYSAAAAAACUaBiGlFKUdS4="
+  }
+},
+{
+  "model": "django_apscheduler.djangojob",
+  "pk": "my_job",
+  "fields": {
+    "next_run_time": "2024-03-16T13:33:30Z",
+    "job_state": "gAWV1gMAAAAAAAB9lCiMB3ZlcnNpb26USwGMAmlklIwGbXlfam9ilIwEZnVuY5SMLm5ld3MubWFuYWdlbWVudC5jb21tYW5kcy5ydW5hcHNjaGVkdWxlcjpteV9qb2KUjAd0cmlnZ2VylIwZYXBzY2hlZHVsZXIudHJpZ2dlcnMuY3JvbpSMC0Nyb25UcmlnZ2VylJOUKYGUfZQoaAFLAowIdGltZXpvbmWUjAhidWlsdGluc5SMB2dldGF0dHKUk5SMCHpvbmVpbmZvlIwIWm9uZUluZm+Uk5SMCV91bnBpY2tsZZSGlFKUjA1FdXJvcGUvTW9zY293lEsBhpRSlIwKc3RhcnRfZGF0ZZROjAhlbmRfZGF0ZZROjAZmaWVsZHOUXZQojCBhcHNjaGVkdWxlci50cmlnZ2Vycy5jcm9uLmZpZWxkc5SMCUJhc2VGaWVsZJSTlCmBlH2UKIwEbmFtZZSMBHllYXKUjAppc19kZWZhdWx0lIiMC2V4cHJlc3Npb25zlF2UjCVhcHNjaGVkdWxlci50cmlnZ2Vycy5jcm9uLmV4cHJlc3Npb25zlIwNQWxsRXhwcmVzc2lvbpSTlCmBlH2UjARzdGVwlE5zYmF1YmgdjApNb250aEZpZWxklJOUKYGUfZQoaCKMBW1vbnRolGgkiGglXZRoKSmBlH2UaCxOc2JhdWJoHYwPRGF5T2ZNb250aEZpZWxklJOUKYGUfZQoaCKMA2RheZRoJIhoJV2UaCkpgZR9lGgsTnNiYXViaB2MCVdlZWtGaWVsZJSTlCmBlH2UKGgijAR3ZWVrlGgkiGglXZRoKSmBlH2UaCxOc2JhdWJoHYwORGF5T2ZXZWVrRmllbGSUk5QpgZR9lChoIowLZGF5X29mX3dlZWuUaCSIaCVdlGgpKYGUfZRoLE5zYmF1YmgfKYGUfZQoaCKMBGhvdXKUaCSIaCVdlGgpKYGUfZRoLE5zYmF1YmgfKYGUfZQoaCKMBm1pbnV0ZZRoJIhoJV2UaCkpgZR9lGgsTnNiYXViaB8pgZR9lChoIowGc2Vjb25klGgkiWglXZRoKSmBlH2UaCxLCnNiYXViZYwGaml0dGVylE51YowIZXhlY3V0b3KUjAdkZWZhdWx0lIwEYXJnc5QpjAZrd2FyZ3OUfZRoImgDjBJtaXNmaXJlX2dyYWNlX3RpbWWUSwGMCGNvYWxlc2NllIiMDW1heF9pbnN0YW5jZXOUSwGMDW5leHRfcnVuX3RpbWWUjAhkYXRldGltZZSMCGRhdGV0aW1llJOUQwoH6AMQECEeAAAAlGgYhpRSlHUu"
+  }
+},
+{
+  "model": "django_apscheduler.djangojobexecution",
+  "pk": 1,
+  "fields": {
+    "job": "my_job",
+    "status": "Error!",
+    "run_time": "2024-03-16T13:25:20Z",
+    "duration": "0.08",
+    "finished": "1710595520.08",
+    "exception": "Cannot resolve keyword 'date' into field. Choices are: author, author_id, categorieslistview, category, comment, id, post_time, post_type, postcategory, rating, text, title",
+    "traceback": "  File \"C:\\Users\\Ермолай\\D6\\Lib\\site-packages\\apscheduler\\executors\\base.py\", line 125, in run_job\n    retval = job.func(*job.args, **job.kwargs)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\dev\\PycharmProjects\\D6\\NewsPaper\\news\\management\\commands\\runapscheduler.py\", line 22, in my_job\n    posts = Post.objects.filter(date__gte=last_week)\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Ермолай\\D6\\Lib\\site-packages\\django\\db\\models\\manager.py\", line 87, in manager_method\n    return getattr(self.get_queryset(), name)(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Ермолай\\D6\\Lib\\site-packages\\django\\db\\models\\query.py\", line 1476, in filter\n    return self._filter_or_exclude(False, args, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Ермолай\\D6\\Lib\\site-packages\\django\\db\\models\\query.py\", line 1494, in _filter_or_exclude\n    clone._filter_or_exclude_inplace(negate, args, kwargs)\n  File \"C:\\Users\\Ермолай\\D6\\Lib\\site-packages\\django\\db\\models\\query.py\", line 1501, in _filter_or_exclude_inplace\n    self._query.add_q(Q(*args, **kwargs))\n  File \"C:\\Users\\Ермолай\\D6\\Lib\\site-packages\\django\\db\\models\\sql\\query.py\", line 1613, in add_q\n    clause, _ = self._add_q(q_object, self.used_aliases)\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Ермолай\\D6\\Lib\\site-packages\\django\\db\\models\\sql\\query.py\", line 1645, in _add_q\n    child_clause, needed_inner = self.build_filter(\n                                 ^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Ермолай\\D6\\Lib\\site-packages\\django\\db\\models\\sql\\query.py\", line 1495, in build_filter\n    lookups, parts, reffed_expression = self.solve_lookup_type(arg, summarize)\n                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Ермолай\\D6\\Lib\\site-packages\\django\\db\\models\\sql\\query.py\", line 1307, in solve_lookup_type\n    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())\n                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Ермолай\\D6\\Lib\\site-packages\\django\\db\\models\\sql\\query.py\", line 1772, in names_to_path\n    raise FieldError(\n"
+  }
+},
+{
+  "model": "django_apscheduler.djangojobexecution",
+  "pk": 2,
+  "fields": {
+    "job": "my_job",
+    "status": "Error!",
+    "run_time": "2024-03-16T13:25:30Z",
+    "duration": "0.02",
+    "finished": "1710595530.02",
+    "exception": "Cannot resolve keyword 'date' into field. Choices are: author, author_id, categorieslistview, category, comment, id, post_time, post_type, postcategory, rating, text, title",
+    "traceback": "  File \"C:\\Users\\Ермолай\\D6\\Lib\\site-packages\\apscheduler\\executors\\base.py\", line 125, in run_job\n    retval = job.func(*job.args, **job.kwargs)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\dev\\PycharmProjects\\D6\\NewsPaper\\news\\management\\commands\\runapscheduler.py\", line 22, in my_job\n    posts = Post.objects.filter(date__gte=last_week)\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Ермолай\\D6\\Lib\\site-packages\\django\\db\\models\\manager.py\", line 87, in manager_method\n    return getattr(self.get_queryset(), name)(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Ермолай\\D6\\Lib\\site-packages\\django\\db\\models\\query.py\", line 1476, in filter\n    return self._filter_or_exclude(False, args, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Ермолай\\D6\\Lib\\site-packages\\django\\db\\models\\query.py\", line 1494, in _filter_or_exclude\n    clone._filter_or_exclude_inplace(negate, args, kwargs)\n  File \"C:\\Users\\Ермолай\\D6\\Lib\\site-packages\\django\\db\\models\\query.py\", line 1501, in _filter_or_exclude_inplace\n    self._query.add_q(Q(*args, **kwargs))\n  File \"C:\\Users\\Ермолай\\D6\\Lib\\site-packages\\django\\db\\models\\sql\\query.py\", line 1613, in add_q\n    clause, _ = self._add_q(q_object, self.used_aliases)\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Ермолай\\D6\\Lib\\site-packages\\django\\db\\models\\sql\\query.py\", line 1645, in _add_q\n    child_clause, needed_inner = self.build_filter(\n                                 ^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Ермолай\\D6\\Lib\\site-packages\\django\\db\\models\\sql\\query.py\", line 1495, in build_filter\n    lookups, parts, reffed_expression = self.solve_lookup_type(arg, summarize)\n                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Ермолай\\D6\\Lib\\site-packages\\django\\db\\models\\sql\\query.py\", line 1307, in solve_lookup_type\n    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())\n                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Ермолай\\D6\\Lib\\site-packages\\django\\db\\models\\sql\\query.py\", line 1772, in names_to_path\n    raise FieldError(\n"
+  }
+},
+{
+  "model": "django_apscheduler.djangojobexecution",
+  "pk": 3,
+  "fields": {
+    "job": "my_job",
+    "status": "Error!",
+    "run_time": "2024-03-16T13:25:40Z",
+    "duration": "0.01",
+    "finished": "1710595540.01",
+    "exception": "Cannot resolve keyword 'date' into field. Choices are: author, author_id, categorieslistview, category, comment, id, post_time, post_type, postcategory, rating, text, title",
+    "traceback": "  File \"C:\\Users\\Ермолай\\D6\\Lib\\site-packages\\apscheduler\\executors\\base.py\", line 125, in run_job\n    retval = job.func(*job.args, **job.kwargs)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\dev\\PycharmProjects\\D6\\NewsPaper\\news\\management\\commands\\runapscheduler.py\", line 22, in my_job\n    posts = Post.objects.filter(date__gte=last_week)\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Ермолай\\D6\\Lib\\site-packages\\django\\db\\models\\manager.py\", line 87, in manager_method\n    return getattr(self.get_queryset(), name)(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Ермолай\\D6\\Lib\\site-packages\\django\\db\\models\\query.py\", line 1476, in filter\n    return self._filter_or_exclude(False, args, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Ермолай\\D6\\Lib\\site-packages\\django\\db\\models\\query.py\", line 1494, in _filter_or_exclude\n    clone._filter_or_exclude_inplace(negate, args, kwargs)\n  File \"C:\\Users\\Ермолай\\D6\\Lib\\site-packages\\django\\db\\models\\query.py\", line 1501, in _filter_or_exclude_inplace\n    self._query.add_q(Q(*args, **kwargs))\n  File \"C:\\Users\\Ермолай\\D6\\Lib\\site-packages\\django\\db\\models\\sql\\query.py\", line 1613, in add_q\n    clause, _ = self._add_q(q_object, self.used_aliases)\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Ермолай\\D6\\Lib\\site-packages\\django\\db\\models\\sql\\query.py\", line 1645, in _add_q\n    child_clause, needed_inner = self.build_filter(\n                                 ^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Ермолай\\D6\\Lib\\site-packages\\django\\db\\models\\sql\\query.py\", line 1495, in build_filter\n    lookups, parts, reffed_expression = self.solve_lookup_type(arg, summarize)\n                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Ермолай\\D6\\Lib\\site-packages\\django\\db\\models\\sql\\query.py\", line 1307, in solve_lookup_type\n    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())\n                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Ермолай\\D6\\Lib\\site-packages\\django\\db\\models\\sql\\query.py\", line 1772, in names_to_path\n    raise FieldError(\n"
+  }
+},
+{
+  "model": "django_apscheduler.djangojobexecution",
+  "pk": 4,
+  "fields": {
+    "job": "my_job",
+    "status": "Error!",
+    "run_time": "2024-03-16T13:25:50Z",
+    "duration": "0.02",
+    "finished": "1710595550.02",
+    "exception": "Cannot resolve keyword 'date' into field. Choices are: author, author_id, categorieslistview, category, comment, id, post_time, post_type, postcategory, rating, text, title",
+    "traceback": "  File \"C:\\Users\\Ермолай\\D6\\Lib\\site-packages\\apscheduler\\executors\\base.py\", line 125, in run_job\n    retval = job.func(*job.args, **job.kwargs)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\dev\\PycharmProjects\\D6\\NewsPaper\\news\\management\\commands\\runapscheduler.py\", line 22, in my_job\n    posts = Post.objects.filter(date__gte=last_week)\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Ермолай\\D6\\Lib\\site-packages\\django\\db\\models\\manager.py\", line 87, in manager_method\n    return getattr(self.get_queryset(), name)(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Ермолай\\D6\\Lib\\site-packages\\django\\db\\models\\query.py\", line 1476, in filter\n    return self._filter_or_exclude(False, args, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Ермолай\\D6\\Lib\\site-packages\\django\\db\\models\\query.py\", line 1494, in _filter_or_exclude\n    clone._filter_or_exclude_inplace(negate, args, kwargs)\n  File \"C:\\Users\\Ермолай\\D6\\Lib\\site-packages\\django\\db\\models\\query.py\", line 1501, in _filter_or_exclude_inplace\n    self._query.add_q(Q(*args, **kwargs))\n  File \"C:\\Users\\Ермолай\\D6\\Lib\\site-packages\\django\\db\\models\\sql\\query.py\", line 1613, in add_q\n    clause, _ = self._add_q(q_object, self.used_aliases)\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Ермолай\\D6\\Lib\\site-packages\\django\\db\\models\\sql\\query.py\", line 1645, in _add_q\n    child_clause, needed_inner = self.build_filter(\n                                 ^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Ермолай\\D6\\Lib\\site-packages\\django\\db\\models\\sql\\query.py\", line 1495, in build_filter\n    lookups, parts, reffed_expression = self.solve_lookup_type(arg, summarize)\n                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Ермолай\\D6\\Lib\\site-packages\\django\\db\\models\\sql\\query.py\", line 1307, in solve_lookup_type\n    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())\n                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Ермолай\\D6\\Lib\\site-packages\\django\\db\\models\\sql\\query.py\", line 1772, in names_to_path\n    raise FieldError(\n"
+  }
+},
+{
+  "model": "django_apscheduler.djangojobexecution",
+  "pk": 5,
+  "fields": {
+    "job": "my_job",
+    "status": "Executed",
+    "run_time": "2024-03-16T13:32:40Z",
+    "duration": "0.07",
+    "finished": "1710595960.07",
+    "exception": null,
+    "traceback": null
+  }
+},
+{
+  "model": "django_apscheduler.djangojobexecution",
+  "pk": 6,
+  "fields": {
+    "job": "my_job",
+    "status": "Executed",
+    "run_time": "2024-03-16T13:32:50Z",
+    "duration": "0.05",
+    "finished": "1710595970.05",
+    "exception": null,
+    "traceback": null
+  }
+},
+{
+  "model": "django_apscheduler.djangojobexecution",
+  "pk": 7,
+  "fields": {
+    "job": "my_job",
+    "status": "Executed",
+    "run_time": "2024-03-16T13:33:00Z",
+    "duration": "0.11",
+    "finished": "1710595980.11",
+    "exception": null,
+    "traceback": null
+  }
+},
+{
+  "model": "django_apscheduler.djangojobexecution",
+  "pk": 8,
+  "fields": {
+    "job": "my_job",
+    "status": "Executed",
+    "run_time": "2024-03-16T13:33:10Z",
+    "duration": "0.11",
+    "finished": "1710595990.11",
+    "exception": null,
+    "traceback": null
+  }
+},
+{
+  "model": "django_apscheduler.djangojobexecution",
+  "pk": 9,
+  "fields": {
+    "job": "my_job",
+    "status": "Executed",
+    "run_time": "2024-03-16T13:33:20Z",
+    "duration": "0.10",
+    "finished": "1710596000.10",
+    "exception": null,
+    "traceback": null
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 1,
+  "fields": {
+    "action_time": "2024-02-17T20:32:44.955Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "news",
+      "post"
+    ],
+    "object_id": "4",
+    "object_repr": "Загаловок4: Текст 4-й новости",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 2,
+  "fields": {
+    "action_time": "2024-02-18T05:50:59.288Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "news",
+      "post"
+    ],
+    "object_id": "1",
+    "object_repr": "В Нашем Доме: Как же нам не весели",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Title\", \"Text\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 3,
+  "fields": {
+    "action_time": "2024-02-18T05:51:10.755Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "news",
+      "post"
+    ],
+    "object_id": "1",
+    "object_repr": "В Нашем Доме: Как же нам не весели",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Text\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 4,
+  "fields": {
+    "action_time": "2024-02-18T05:53:56.909Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "news",
+      "post"
+    ],
+    "object_id": "2",
+    "object_repr": "Компьютерная Игра: Дурак — карточная иг",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Title\", \"Text\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 5,
+  "fields": {
+    "action_time": "2024-02-18T05:54:12.572Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "news",
+      "post"
+    ],
+    "object_id": "4",
+    "object_repr": "Загаловок4: Текст 4-й новости",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Post type\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 6,
+  "fields": {
+    "action_time": "2024-02-18T06:24:35.236Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "news",
+      "post"
+    ],
+    "object_id": "2",
+    "object_repr": "Компьютерная Игра Дурак: Дурак — карточная иг",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Title\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 7,
+  "fields": {
+    "action_time": "2024-03-05T16:55:25.000Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "socialaccount",
+      "socialapp"
+    ],
+    "object_id": "1",
+    "object_repr": "Yandex",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 8,
+  "fields": {
+    "action_time": "2024-03-05T17:00:03.572Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "sites",
+      "site"
+    ],
+    "object_id": "1",
+    "object_repr": "127.0.0.1",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Domain name\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 9,
+  "fields": {
+    "action_time": "2024-03-05T17:06:11.041Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "auth",
+      "group"
+    ],
+    "object_id": "1",
+    "object_repr": "authors",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 10,
+  "fields": {
+    "action_time": "2024-03-05T17:09:29.827Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "auth",
+      "user"
+    ],
+    "object_id": "5",
+    "object_repr": "nicyash7",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 11,
+  "fields": {
+    "action_time": "2024-03-05T17:12:58.371Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "auth",
+      "user"
+    ],
+    "object_id": "6",
+    "object_repr": "nicyash5",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 12,
+  "fields": {
+    "action_time": "2024-03-05T17:20:24.594Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "auth",
+      "user"
+    ],
+    "object_id": "7",
+    "object_repr": "nicyash1",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 13,
+  "fields": {
+    "action_time": "2024-03-05T17:35:21.630Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "auth",
+      "user"
+    ],
+    "object_id": "8",
+    "object_repr": "user",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 14,
+  "fields": {
+    "action_time": "2024-04-16T17:03:49.066Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "news",
+      "post"
+    ],
+    "object_id": "35",
+    "object_repr": "Загаловок Комедии7: Текст c тасками перв",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Text\"]}}]"
+  }
+}
+]

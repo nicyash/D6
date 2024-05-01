@@ -12,7 +12,8 @@ from django.views.generic import ListView, DetailView, CreateView, UpdateView, D
 from .filters import PostFilter
 from .forms import PostForm
 from .models import Post, Category, Subscriber
-from .tasks import send_email_task, weekly_send_email_task
+from .tasks import send_email_task
+from django.core.cache import cache
 
 
 class PostList(ListView):
@@ -36,9 +37,20 @@ class PostList(ListView):
 
 
 class PostDetail(DetailView):
-    model = Post
+    # model = Post
     template_name = 'post.html'
-    context_object_name = 'post'
+    # context_object_name = 'post'
+    queryset = Post.objects.all()
+
+    def get_object(self, *args, **kwargs):  # переопределяем метод получения объекта
+        obj = cache.get(f'news-{self.kwargs["pk"]}', None)  # кэш очень похож на словарь, и метод get действует так же.
+                                                            # Он забирает значение по ключу, если его нет, то забирает None.
+
+        # если объекта нет в кэше, то получаем его и записываем в кэш
+        if not obj:
+            obj = super().get_object(queryset=self.queryset)
+            cache.set(f'news-{self.kwargs["pk"]}', obj)
+        return obj
 
 
 class PostCreate(PermissionRequiredMixin, LoginRequiredMixin, CreateView):

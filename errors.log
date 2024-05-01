@@ -1,0 +1,2 @@
+2024-05-01 21:44:55,086 - INFO - Watching for file changes with StatReloader - C:\Users\Ермолай\D6\Lib\site-packages\django\utils\autoreload.py - None
+2024-05-01 21:45:36,913 - INFO - C:\dev\PycharmProjects\D6\NewsPaper\NewsPaper\settings.py changed, reloading. - C:\Users\Ермолай\D6\Lib\site-packages\django\utils\autoreload.py - None
