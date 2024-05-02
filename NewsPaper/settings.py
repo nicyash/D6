@@ -188,6 +188,10 @@ CACHES = {
     }                                                  # Не забываем создать папку cache_files внутри папки с manage.py!
 }
 
+ADMINS = (
+    ('Ermolay', 'nicyash@yandex.ru'),
+)
+
 LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,
